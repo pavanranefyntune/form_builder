@@ -44,4 +44,17 @@ const typeOptions = [
   },
 ];
 
-export { gridOptions, typeOptions };
+const selectorTypes = [
+  {
+    id: 1,
+    name: "Multiselect",
+    value: "multiselect",
+  },
+  {
+    id: 2,
+    name: "Searchable",
+    value: "searchable",
+  },
+];
+
+export { gridOptions, typeOptions, selectorTypes };

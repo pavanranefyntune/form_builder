@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "myFontFamily";
+  src: url("@/assets/fonts/Inter/static/Inter_18pt-Medium.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "myFontFamily2";
+  src: url("@assets/fonts/Open_Sans");
+  font-style: normal;
+  font-weight: 600;
+}
+
+html {
+  font-family: "myFontFamily", "myFontFamily2";
+}
+
+@theme {
+  --color-primary: rgb(41 91 255);
+  --color-secondary: rgb(44 212 74);
+  --color-tertiary: rgb(217 221 255);
+  --color-error: rgb(198 40 40);
+  --color-success: rgb(46 125 50);
+  --color-info: rgb(255 152 0);
+  --color-warning: rgb(255 111 0);
+  --color-offWhite: #eff3f6;
+  --color-extraLightGray: #dee2e6;
+  --color-lightGray: #ced4da;
+  --color-gray: #adb5bd;
+  --color-darkGray: #6c757d;
+  --color-body: #495057;
+  --color-subHeading: #343a40;
+  --color-heading: #212529;
+  --color-darkBg: #343a40;
+}

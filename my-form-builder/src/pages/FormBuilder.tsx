@@ -15,10 +15,8 @@ const FormBuilder = () => {
     setFormFields([...formFields, data]);
   };
 
-  console.log(formFields);
-
   return (
-    <div className="bg-gray-200 h-full w-full p-4 flex gap-4">
+    <div className="bg-offWhite h-full w-full p-4 flex gap-4">
       <FormContext.Provider
         value={{
           formFields,

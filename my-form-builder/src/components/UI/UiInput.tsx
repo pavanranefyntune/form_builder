@@ -9,23 +9,6 @@ import {
 import { Asterisk } from "lucide-react";
 import React from "react";
 
-type TTextInputProps = {
-  containerClass?: string;
-  label?: string;
-  icon?: React.ReactNode;
-  registerOptions?: RegisterOptions<FieldValues, string>;
-  name: string;
-  className?: string;
-  placeholder?: string;
-  type?: string;
-  disabled?: boolean;
-  textHint?: string;
-  textHintClassName?: string;
-  min?: string;
-  max?: string;
-  autoComplete?: string;
-};
-
 function UiInput({
   containerClass,
   label,
@@ -40,7 +23,8 @@ function UiInput({
   max,
   autoComplete = "off",
   textHintClassName,
-}: TTextInputProps) {
+  ...rest
+}) {
   const {
     register,
     formState: { errors },
@@ -66,6 +50,7 @@ function UiInput({
       )}
       <section className="w-full ">
         <input
+          {...rest}
           type={type}
           placeholder={placeholder}
           disabled={disabled}
