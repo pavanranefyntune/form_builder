@@ -1,11 +1,4 @@
-/** @format */
-
-import {
-  FieldValues,
-  RegisterOptions,
-  UseFormRegister,
-  useFormContext,
-} from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 import { Asterisk } from "lucide-react";
 import React from "react";
 
@@ -28,9 +21,7 @@ function UiInput({
   const {
     register,
     formState: { errors },
-  }: // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  { register: UseFormRegister<FieldValues>; formState: { errors: any } } =
-    useFormContext();
+  } = useFormContext();
   let errorMessage = String(errors[name]?.message || "");
 
   if (String(name).includes(".")) {
