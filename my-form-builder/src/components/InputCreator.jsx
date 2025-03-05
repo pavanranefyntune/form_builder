@@ -16,6 +16,7 @@ const InputCreator = () => {
   const formMethods = useForm();
 
   const onSubmitHandler = (data) => {
+    console.log(editData);
     const dataObj = {
       type: data.type,
       placeholder: data.placeholder,
@@ -24,7 +25,29 @@ const InputCreator = () => {
       grid_size: data.grid_size,
       selector_type: data.selector_type,
     };
+    if (editData.index) {
+      dataObj.id = editData.index;
+      handleCreateField(dataObj);
+      formMethods.reset({
+        label: "",
+        type: {},
+        name: "",
+        selector_type: {},
+        placeholder: "",
+        grid_size: {},
+      });
+
+      return;
+    }
     handleCreateField(dataObj);
+    formMethods.reset({
+      label: "",
+      type: {},
+      name: "",
+      selector_type: {},
+      placeholder: "",
+      grid_size: {},
+    });
   };
 
   useEffect(() => {

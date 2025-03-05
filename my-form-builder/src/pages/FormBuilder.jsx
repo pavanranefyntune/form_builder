@@ -12,6 +12,12 @@ const FormBuilder = () => {
   const [editData, setEditData] = useState({});
 
   const handleCreateField = (data) => {
+    if (data.id) {
+      const updatedFields = [...formFields];
+      updatedFields.splice(data.id, 1, data);
+      setFormFields([...updatedFields]);
+      return;
+    }
     setFormFields([...formFields, data]);
   };
 

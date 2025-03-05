@@ -22,6 +22,12 @@ const Layout = () => {
     setFormFields(formFieldCopy);
   };
 
+  const handleDelete = (index) => {
+    const updatedFields = [...formFields];
+    updatedFields.splice(index, 1);
+    setFormFields([...updatedFields]);
+  };
+
   return (
     <div className="flex flex-col gap-4 h-full w-[25%] bg-white rounded-lg p-4 shadow-xl">
       <h3 className="text-center text-subHeading font-semibold text-2xl">
@@ -54,11 +60,12 @@ const Layout = () => {
                 <UiButton
                   buttonType="tertiary"
                   icon={<PencilIcon className="size-6 text-secondary/50" />}
-                  onClick={() => setEditData(field)}
+                  onClick={() => setEditData({ index, ...field })}
                 />
                 <UiButton
                   buttonType="tertiary"
                   icon={<Trash2Icon className="size-6 text-error/50" />}
+                  onClick={() => handleDelete(index)}
                 />
               </section>
             </div>
