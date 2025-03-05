@@ -57,4 +57,37 @@ const selectorTypes = [
   },
 ];
 
-export { gridOptions, typeOptions, selectorTypes };
+const defaultFields = [
+  {
+    label: "Name",
+    type: {
+      id: 1,
+      name: "Text",
+      value: "text",
+    },
+    name: "name",
+    placeholder: "Enter your name",
+    grid_size: {
+      id: 1,
+      name: "One",
+      value: "col-span-1",
+    },
+  },
+  {
+    label: "Mobile",
+    type: {
+      id: 1,
+      name: "Number",
+      value: "number",
+    },
+    name: "mobile",
+    placeholder: "Enter your mobile",
+    grid_size: {
+      id: 1,
+      name: "One",
+      value: "col-span-1",
+    },
+  },
+];
+
+export { gridOptions, typeOptions, selectorTypes, defaultFields };

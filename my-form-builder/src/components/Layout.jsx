@@ -1,7 +1,12 @@
 import { useContext, useState } from "react";
 import { FormContext } from "../pages/FormBuilder";
 import React from "react";
-import { GripVertical, PencilIcon, Trash2Icon } from "lucide-react";
+import {
+  BetweenHorizontalEndIcon,
+  GripVertical,
+  PencilIcon,
+  Trash2Icon,
+} from "lucide-react";
 import UiButton from "./UI/UiButton";
 
 const Layout = () => {
@@ -29,11 +34,15 @@ const Layout = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 h-full w-[25%] bg-white rounded-lg p-4 shadow-xl">
-      <h3 className="text-center text-subHeading font-semibold text-2xl">
+    <div className="flex flex-col gap-4 h-full w-[25%] bg-white rounded-lg px-4 py-2 shadow-xl">
+      <p className=" text-subHeading font-semibold text-lg flex items-center gap-2">
+        {" "}
+        <span className="bg-secondary/10 p-2 rounded-full">
+          {<BetweenHorizontalEndIcon className="size-4 text-secondary/90" />}{" "}
+        </span>
         Layout
-      </h3>
-      <div className="flex flex-col gap-4 h-full overflow-y-auto">
+      </p>
+      <div className="flex flex-col gap-4 h-full overflow-y-auto px-4 py-2 ">
         {formFields?.map((field, index) => {
           return (
             <div

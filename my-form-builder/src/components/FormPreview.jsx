@@ -11,7 +11,7 @@ const FormPreview = () => {
   const formMethods = useForm();
   return (
     <div className="h-full w-[50%] bg-white rounded-lg p-4 shadow-xl flex flex-col gap-4">
-      <h3 className="text-center text-subHeading font-semibold text-2xl">
+      <h3 className="text-center text-subHeading font-semibold text-lg">
         Form Preview
       </h3>
       <FormProvider {...formMethods}>
