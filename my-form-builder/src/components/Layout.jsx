@@ -68,12 +68,12 @@ const Layout = () => {
               <section className="flex items-center gap-2">
                 <UiButton
                   buttonType="tertiary"
-                  icon={<PencilIcon className="size-4 text-secondary/50" />}
+                  icon={<PencilIcon className="size-4 text-secondary/60" />}
                   onClick={() => setEditData({ index, ...field })}
                 />
                 <UiButton
                   buttonType="tertiary"
-                  icon={<Trash2Icon className="size-6 text-error/50" />}
+                  icon={<Trash2Icon className="size-4 text-error/60" />}
                   onClick={() => handleDelete(index)}
                 />
               </section>
