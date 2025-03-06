@@ -60,7 +60,7 @@ const Layout = () => {
               }}
             >
               <section className="flex items-center gap-2">
-                <GripVertical className="size-6 text-gray" />
+                <GripVertical className="size-4 text-gray" />
                 <p className="capitalize text-md font-semibold">
                   {field.label}
                 </p>
@@ -68,7 +68,7 @@ const Layout = () => {
               <section className="flex items-center gap-2">
                 <UiButton
                   buttonType="tertiary"
-                  icon={<PencilIcon className="size-6 text-secondary/50" />}
+                  icon={<PencilIcon className="size-4 text-secondary/50" />}
                   onClick={() => setEditData({ index, ...field })}
                 />
                 <UiButton
